@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Card</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Estilos para el botón */
+    .button {
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 120px); /* Ajusta según sea necesario */
+      transform: translateY(-50%);
+      background-color: #ff6f61;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 1; /* Coloca el botón delante de la tarjeta */
+    }
+
+    .button:hover {
+      background-color: #e6594c;
+    }
+  </style>
+    <style>
+		/* Estilos para el contenedor del GIF */
+		.gif-container {
+		  position: absolute;
+		  top: 50%;
+		  left: 10px; /* Ajusta según sea necesario para pegarlo al borde izquierdo */
+		  transform: translateY(-50%);
+		}
+	
+		/* Estilos para el GIF */
+		.gif {
+		  max-width: 400px; /* Ajusta según el tamaño del GIF */
+		  height: auto;
+		}
+	  </style>
+</head>
+<body>
+	<div class="gif-container">
+		<img src="ale22.gif" alt="GIF" class="gif">
+	</div>
+
+<div class="card">
+    <div class="imgBox">
+        <div class="bark"></div>
+        <img src="https://image.ibb.co/fYzTrb/lastofus.jpg">
+    </div>
+    <div class="details">
+        <h4 class="color1">Ale</h4>
+        <h4 class="color2 margin">(HAPPY BIRTHDAY)</h4>
+        <p>En este día tan especial, quiero tomar un</p>
+        <p>momento para celebrar no solo tu</p>
+        <p>cumpleaños, sino también la increíble</p>
+        <p>persona que eres. Deseo que</p>
+        <p>todas tus ilusiones y sueños</p>
+        <p>se hagan realidad.Porque tú e mereces </p>
+        <p>todo lo mejor que este mundo</p>
+        <p>tiene para ofrecer.Prometo estar</p>
+        <p>siempre aquí para apoyarte,animarte </p>
+        <p>y amarte en cada paso del camino.</p>
+        <p class="text-right">Te amo mucho</p>
+        <p class="text-right">♥AyA</p>
+    </div>
+    <button class="button" id="playButton">Toca ❤️ </button>
+</div>
+
+<div>
+    <audio id="audio" src="ale23.mp3" type="audio/mpeg"></audio>
+</div>
+
+<script>
+    // Función para reproducir la música al hacer clic en el botón "Toca <3"
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audio = document.getElementById('audio');
+        audio.play();
+    });
+</script>
+<script defer src="https://app.embed.im/snow.js"></script> 
+<div id="photo-container">
+	<img src="25.png" alt="Tu Foto">
+	<img src="24.png" alt="Tu Foto">
+	<img src="23.png" alt="Tu Foto">
+  </div>
+  <style>
+	#photo-container {
+	  display: flex; /* Utiliza flexbox */
+	  flex-direction: column; /* Dirección de los elementos: columna */
+	  align-items: center; /* Centra horizontalmente los elementos */
+	  position: fixed;
+	  top: 50%;
+	  right: 20px;
+	  transform: translateY(-50%);
+	  z-index: 9999; /* Asegura que la foto esté por encima de otros elementos */
+	}
+  
+	#photo-container img {
+	  width: 250px; /* Tamaño de todas las imágenes */
+	  height: 250px; /* Tamaño de todas las imágenes */
+	  margin-bottom: -40px; /* Espacio entre las imágenes */
+	  border-radius: 50%; /* Crea bordes redondeados para las imágenes */
+	}
+  </style>
+</body>
+</html>
